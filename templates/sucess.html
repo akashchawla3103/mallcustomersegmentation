@@ -1,0 +1,19 @@
+{% extends 'base.html' %} {% load static %} {% block content %} {% if sucess %} {% endif %}
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+    $(document).ready(function() {
+        swal({
+                title: "Sent Sucessfully!",
+                text: "Send Segmented Mails!",
+                icon: "success",
+                button: "->!",
+            })
+            .then((value) => {
+                function pageRedirect() {
+                    window.location.replace("https://www.tutorialrepublic.com/");
+                }
+            });
+    });
+</script>
+{% endblock %}

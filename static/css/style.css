@@ -1,0 +1,48 @@
+.hand {
+    font: Cinzel Decorative;
+    font-family: 'Cinzel Decorative', cursive;
+    /* font-family: 'Comforter', cursive; */
+    font-weight: 700;
+}
+
+.hand1 {
+    font: Cinzel Decorative;
+    font-family: 'Cinzel Decorative', cursive;
+    font-weight: 100;
+}
+
+.form-b {
+    /* margin: 5%; */
+    padding: 5%;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-bottom: 10%;
+    /* background-color: white; */
+}
+
+.logo {
+    width: 75%;
+}
+
+.c1 {
+    color: white;
+    /* background-image: linear-gradient(to right, rgb(120, 54, 122), rgb(157, 55, 241)); */
+    /* border: 1px solid darkblue; */
+    padding-top: 5%;
+}
+
+.b1 {
+    border: 2px solid black;
+}
+
+.outside {
+    background-image: linear-gradient(to right, rgb(117, 25, 121), rgb(157, 55, 241));
+}
+
+.text {
+    color: rgb(189, 45, 45);
+}
+
+.analytics {
+    width: 50%;
+}

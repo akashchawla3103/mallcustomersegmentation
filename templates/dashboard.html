@@ -1,0 +1,110 @@
+{% extends 'base.html' %} {% load static %} {% block title %} Dashboard {% endblock %} {% block content %}
+
+<div class="c1">
+    <h1 id="s" style="visibility: hidden;">{{sucess}}</h1>
+
+    <form action="upload" enctype="multipart/form-data" method='post'>
+        {% csrf_token %}
+        <div class="mb-3">
+            <div id="fileempty" style="visibility: hidden;">
+                <p></p>
+            </div>
+            {% if filesucess or cleansucess %} {% else %}
+
+            <img src="{% static 'images/file.png' %}" alt="Logo" class="fileupload"><br>
+            <div>
+                <label for="formFile" class="form-label">Please Upload .csv file</label><br>
+            </div>
+            <div>
+                <input class="form-control" type="file" name="fileupload" id="formFile" style="content-visibility:inherit;" required>
+            </div><br>
+
+            <div class="col-auto">
+                <button type="submit" class="btn btn-primary mb-3" style="background-color: rgb(42, 11, 71); border:1px solid rgb(42, 11, 71)">Upload</button>
+            </div>
+
+            {% endif %}
+    </form>
+
+    {% if filesucess %}
+    <!-- Alert -->
+    <div class="alert alert-success" role="alert">
+        Upload Sucessful!!!
+    </div>
+    <!-- Buttons -->
+    <div class="col-auto">
+        <button class="btn btn-primary mb-3"><a href="{{url}}" style="text-decoration: none;color: white;">View File</a></button>
+        <form action="cleandata" method='post'>
+            {% csrf_token %}
+            <input type="hidden" id="fileId" name="fileId" value="{{url}}">
+            <!-- <div class="col-auto"> -->
+            <button type="submit" class="btn btn-warning mb-3">Process</button>
+            <!-- </div> -->
+        </form>
+    </div>
+    {% endif %}
+    <!-- If file is a wrong  -->
+    {% if fileerror %}
+    <div class="alert alert-danger" role="alert">
+        Please Upload the correct File.
+        <button style="float: right;" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endif %}
+
+    <!-- If cleaning is Sucessful -->
+    <!-- Alerts -->
+    {% if cleansucess %}
+    <div class="alert alert-success" role="alert">
+        Processed Sucessfully!!!
+    </div>
+
+    <div class="col-auto">
+        <div class="btn-group" role="group">
+            <button id="btnGroupDrop1" type="button" class="btn btn-primary mb-3 dropdown-toggle" style="text-decoration: none;color: white;" data-bs-toggle="dropdown" aria-expanded="false">
+              Files
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                <li><a class="dropdown-item" href="{{finalfile}}">Cleaned File</a></li>
+                {% for i in url %}
+                <li><a class="dropdown-item" href={{i}}>{{i}}</a></li>
+                {% endfor %}
+
+            </ul>
+        </div>
+        <div class="btn-group" role="group">
+            <button id="btnGroupDrop1" type="button" class="btn btn-success mb-3 dropdown-toggle" style="text-decoration: none;color: white;" data-bs-toggle="dropdown" aria-expanded="false">
+              Send Mails
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+
+                <form action="mail_page" method="POST">
+                    {% csrf_token %}
+                    <input type="hidden" id="fileId" name="fileId" value="{{finalfile}}">
+                    <li><button type="submit" class="dropdown-item">General Advertisment</button></li>
+                </form>
+                <form action="analytics" method="POST">
+                    {% csrf_token %}
+                    <input type="hidden" id="fileId" name="fileId" value="{{finalfile}}">
+                    <li><button type="submit" class="dropdown-item">Grouped Advertisment</button></li>
+                </form>
+
+            </ul>
+        </div>
+        <!-- <button class="btn btn-primary mb-3"><a href="{{finalfile}}" style="text-decoration: none;color: white;">Cleaned File</a></button> -->
+        <!-- <button class="btn btn-success mb-3"><a href="mail_page" style="text-decoration: none;color: white;">Send Mail</a></button> -->
+        <button class="btn btn-danger mb-3"><a href="analytics" style="text-decoration: none;color: white;">View Analytics</a></button>
+    </div>
+
+    <!-- <div class="col-auto">
+        <button class="btn btn-success mb-3"><a href="mail_page" style="text-decoration: none;color: white;">Send Mail</a></button>
+    </div> -->
+
+    {% endif %}
+
+    </div>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="/static/js/alert.js"></script>
+
+
+    {% endblock %}

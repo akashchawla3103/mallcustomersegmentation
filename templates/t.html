@@ -1,0 +1,145 @@
+<!-- {% load static %} -->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href=" {% static 'css/style.css' %}">
+    <link rel="stylesheet" href=" {% static 'css/temp.css' %}">
+
+    <link rel="stylesheet" href=" {% static 'css/homestyle.css' %}">
+    <!-- <link rel="stylesheet" href=" {% static 'css/sidebarstyle.css' %}"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Gfonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Comforter&display=swap" rel="stylesheet">
+    <!-- PLoty -->
+    <script src='https://cdn.plot.ly/plotly-2.8.3.min.js'></script>
+    <!-- side bar -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"> -->
+    <!-- Side Bar End -->
+    <!-- <title>{% block title %} {% endblock %}</title> -->
+</head>
+
+<body>
+    <!-- <section class="navbar"> -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="{% static 'images/company.png' %}" alt="Logo" class="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="nav-item">
+                <a type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop"><i class=" large bars icon"></i></i></a>
+                <!-- <button class="nav link" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop">Enable backdrop (default)</button> -->
+
+            </div>
+            <!-- {% endif %} -->
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href='home'>Login</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- {% include 'mainn.html' %} -->
+
+
+</body>
+{% load static %}
+<section class="Home">
+    <div class="image">
+
+        <!-- </div> -->
+        <div class="row">
+
+            <div class="col-sm-4">
+                <div style="padding-top:25%">
+                    <h1 class="brand_name hand" style="text-align: center;">Express Mails</h1>
+                    <div class="Bnav hand">
+                        <p>Welcome to Xpress Mails, Your one stop for email Marketing</p>
+                        <p>
+                            The act of sending a commercial message, typically to a group of people, using email.
+                        </p>
+
+
+                    </div>
+                    <div style="padding: 2% 17%;">
+                        <!-- <button type="button" class="but1">Send Mail</button> -->
+                        <a type="button" class="but1" href="aut_user" style="text-decoration: none;">Send Mail</a>
+                        <a type="button" class="but1 but2" href="#Aboutus" style="text-decoration: none;">Know More</a>
+
+                        </form>
+
+                        <!-- <a type="button" class="but1 but2" href="#Aboutus" style="text-decoration: none;">Know More</a> -->
+                        <!-- <button type="button" class="but1 but2">Know More</button> -->
+
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="col-8 pageimage">
+                <img src="{% static 'images/indexscreen.png' %}" alt="" style="height: 600px;padding-left:10%">
+            </div>
+        </div>
+
+
+        <section id="Aboutus">
+            <!-- <div class="row" style="margin-top: 10%; background-color:aliceblue"> -->
+
+            <!-- <div class="jumbotron" style="background-color:rgb(169, 123, 187)"> -->
+            <div class="container-fluid">
+                <div class="rowpad row">
+                    <div class="col-sm-6">
+                        <img src="{% static 'images/About.png' %}" alt="" style="height: 500px;padding-right:85%">
+                    </div>
+                    <div class="col-sm-6">
+                        <h1 class="display-1 hand" style="color: rgb(81, 16, 141);">About Us</h1>
+                        <p class="lead">Welcome to Xpress Emails, your number one source for Email Marketing. We're dedicated to providing you the very best of service, with an emphasis on Cleaning data and Segmenting data.</p>
+                        <hr class="my-4">
+                        <p>Founded in 2021 by Mr.Akash Chawla, Xpress Emails has come a long way from its beginnings in Ichalkaranji.<br><br> When Akash Chawla first started out, his passion for <strong><i>"Help at your Doorstep"</i></strong> them to start
+                            their own business.</p>
+                        <p class="hand"><strong> Hope you enjoy our services as much as we enjoy offering them to you.<br> If you have any questions or comments,
+                                      please don't hesitate to contact us.</strong></p>
+
+                        <p class="lead">
+                            <button type="button" id="bt" class="but1 but2">Contact</button>
+                            <!-- <a type="button" class="but1" href="youtube" style="text-decoration: none;">Send Mail</a> -->
+
+                            <!-- <p id="demo"></p> -->
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <!-- </div> -->
+        </section>
+
+
+    </div>
+</section>
+
+</html>

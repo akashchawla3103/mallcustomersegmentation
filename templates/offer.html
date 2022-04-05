@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial;
+        }
+        
+        .coupon {
+            border: 5px dotted #bbb;
+            width: 85%;
+            border-radius: 15px;
+            margin-left: 5%;
+            height: 50%;
+        }
+        
+        .container {
+            padding: 2px 16px;
+            background-color: #f1f1f1;
+        }
+        
+        .promo {
+            color: white;
+            background: rgb(97, 82, 82);
+            padding: 3px;
+        }
+        
+        .expire {
+            color: red;
+        }
+        
+        .offer {
+            padding-left: 5%;
+            height: max-content;
+        }
+    </style>
+</head>
+
+
+<body>
+    {{name}}
+    <!-- <div class="container"> -->
+
+    <!-- <img class="offer" src="https://pixabay.com/get/gafe82aa763da098f8c76e82385ebf57cef09f36f24b63baaba3a8d180e0fce2e9dbf8eedbda1e19d6907dc7a5c9dd026efebd2503d6370a0a5b536c60ff64288565e32da4d5ba67ac46e49409b622ba8_1280.png"/> -->
+    <!-- </div> -->
+    <div>
+        <br>
+    </div>
+    <div class="coupon">
+        <div class="container">
+            <a href="https://ibb.co/qgQrycX"><img src="https://i.ibb.co/SmC3sMW/welcome-LP-BANNER-1440x752.png" alt="welcome-LP-BANNER-1440x752" style="width: 100%;  align-items: center;"></a>
+        </div>
+        <div class="container" style="background-color:white">
+            <h2><b>{% include 'offer.txt' %}% CASHBACK</b></h2>
+
+            <p>Saving offer For you:
+                <strong>BUY MORE SAVE MORE</strong>
+            </p>
+        </div>
+        <div class="container">
+            <p>Use Promo Code: <span class="promo">XPRESS MAIL</span></p>
+            <p class="expire">Valid:03/03/2022</p>
+        </div>
+    </div>
+</body>
+
+
+</html>
+
+</html>

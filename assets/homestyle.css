@@ -1,0 +1,128 @@
+    .hand {
+        font: Cinzel Decorative;
+        font-family: 'Cinzel Decorative', cursive;
+        /* font-family: 'Comforter', cursive; */
+        font-weight: 700;
+        /* text-align: center; */
+    }
+    /* .main_b {
+        text-align: center;
+    }
+     */
+    
+    .g_button {
+        background-color: rgb(42, 11, 71);
+        border: 1px solid rgb(42, 11, 71);
+    }
+    
+    .logo {
+        height: 55px;
+        width: 150px;
+    }
+    
+    .hand1 {
+        font: Cinzel Decorative;
+        font-family: 'Cinzel Decorative', cursive;
+        font-weight: 100;
+        color: white;
+    }
+    /* .container {
+        padding-top: 10%;
+    } */
+    
+    .container1 {
+        margin: 5%;
+        background-image: linear-gradient(to right, rgb(120, 54, 122), rgb(157, 55, 241));
+    }
+    
+    .container2 {
+        margin: 5%;
+    }
+    
+    .Bnav {
+        padding: 2% 17%;
+    }
+    
+    .image {
+        margin-top: 2%;
+    }
+    
+    .brand_name {
+        color: rgb(82, 30, 105);
+    }
+    
+    .but1 {
+        background-color: blueviolet;
+        outline: auto;
+        color: white;
+        border-radius: 4%;
+        padding: 2% 2%;
+        margin-top: 2%;
+        display: inline-block;
+        font-size: large;
+    }
+    
+    .but1:hover {
+        background-color: rgb(82, 30, 105);
+    }
+    
+    .but2 {
+        background-color: white;
+        color: blueviolet;
+    }
+    
+    .but2:hover {
+        background-color: rgb(113, 76, 148);
+        color: white;
+    }
+    
+    .nav-link {
+        padding-left: 20%;
+    }
+    
+    .rowpad {
+        margin: 5%;
+        padding: 5%;
+    }
+    
+    .upload {
+        padding: 2%;
+    }
+    
+    .fileupload {
+        width: 25%;
+        margin-left: 35%;
+        align-content: center;
+    }
+    
+    .offerbtn {
+        margin-right: 50%;
+        float: right;
+    }
+    
+    .btnoffer {
+        background-color: blueviolet;
+        color: rgb(88, 71, 95);
+    }
+    /* Media queries */
+    
+    @media (max-width:989px) {
+        .pageimage {
+            display: none;
+        }
+        .main_b {
+            text-align: center;
+        }
+        .hand {
+            text-align: center;
+        }
+    }
+    /* Fotter */
+    
+    .text-small {
+        font-size: 1%;
+    }
+    
+    footer {
+        background: rgb(82, 30, 105);
+    }

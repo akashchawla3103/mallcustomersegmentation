@@ -1,0 +1,29 @@
+{% extends 'base.html' %} {% load static %} {% block title %} Dashboard {% endblock %} {% block content %}
+<div class="c1">
+    {% for i in seg %}
+    <li><a class="dropdown-item" href={{i}}>Grouped File{{i}}</a></li>
+    {% endfor %}
+
+
+
+    <div class="btn-group" role="group">
+        <button id="btnGroupDrop1" type="button" class="btn btn-success mb-3 dropdown-toggle" style="text-decoration: none;color: white;" data-bs-toggle="dropdown" aria-expanded="false">
+          Send Mails
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+
+            <form action="mail_page" method="POST">
+                {% csrf_token %}
+                <input type="hidden" id="fileId" name="fileId" value="{{finalfile}}">
+                <li><button type="submit" class="dropdown-item">General Advertisment</button></li>
+            </form>
+
+            <li><a class="dropdown-item" href="#">Grouped Advertisment</a></li>
+        </ul>
+    </div>
+    <!-- <button class="btn btn-primary mb-3"><a href="{{finalfile}}" style="text-decoration: none;color: white;">Cleaned File</a></button> -->
+    <!-- <button class="btn btn-success mb-3"><a href="mail_page" style="text-decoration: none;color: white;">Send Mail</a></button> -->
+    <button class="btn btn-danger mb-3"><a href="analytics" style="text-decoration: none;color: white;">View Analytics</a></button>
+</div>
+</div>
+{% endblock %}

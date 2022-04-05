@@ -1,0 +1,43 @@
+{% extends 'base.html' %} {% block content %}
+
+
+<div class="outside">
+    <div class="container form-b">
+        <div>
+
+            {% if login_Fail %}
+            <div class="alert alert-danger" role="alert">
+                Please Enter Correct Details.
+                <button style="float: right;" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endif %} {% if logout %}
+            <div class="alert alert-success " role="alert">
+                {{name}} you are Logged out Sucessfully.
+
+                <button style="float: right;" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endif %}
+
+        </div>
+        <h1 class="hand" style="color: white;">LogIn</h1>
+        <form action="check" method='post'>
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="exampleInputEmail1 hand1" class="form-label" style="color: white;">Username</label>
+                <input type="text" class="form-control" name="username" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username">
+                <div id="emailHelp" class="form-text" style="color: white;">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1 hand1" class="form-label" style="color: white;">Password</label>
+                <input type="password" class="form-control " name="pass" id="exampleInputPassword1" placeholder="Password">
+                <div id="passwordHelp" class="form-text text" style="color: white;">Enter Password</div>
+            </div>
+            <!-- <div class="mb-3 form-check ">
+   
+    </div> -->
+            <button type="submit" class="btn btn-primary">Login</button>
+
+        </form>
+    </div>
+</div>
+{% endblock %}
